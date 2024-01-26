@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap"
+            rel="stylesheet">
+        <link rel="stylesheet" href="to_do_list.css" type="text/css">
+        <title>Document</title>
+    </head>
+    <body>
+        <main>
+            <div class="card">
+                <div class="card__head">
+                    <div class="card__head__text">
+                        <p class="card__date"></p>
+                        <p class="card__task__count"><span></span></p>
+                    </div>
+                    <div class="card__head__buttons">
+                        <button class="add" type="button"
+                            onclick="addTask()">+</button>
+                        <button class="delete" type="button"
+                            onclick="deleteTask()">-</button>
+                    </div>
+                </div>
+                <!-- list item will be added through javascript -->
+                <div class="card__list">
+                </div>
+                <input type="text" name="insert" id="insert__task"
+                    class="insert__task" required
+                    placeholder="Make your new todo task here: ">
+                <script src="to_do_list.js"></script>
+            </div>
+
+        </main>
+    </body>
+</html>

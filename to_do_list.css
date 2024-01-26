@@ -1,0 +1,102 @@
+:root {
+    --royal-blue-web-color: #566ED7ff;
+    --white-smoke: #F2F2F2ff;
+    --light-gray: #99999Cff;
+    --less-light-gray: rgb(98, 98, 102);
+    --white: #FEFEFFff;
+}
+
+*,
+*::before,
+*::after {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: var(--less-light-gray);
+}
+
+body {
+    background-color: var(--royal-blue-web-color);
+    height: 100dvh;
+}
+
+main {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    border-radius: 10px;
+    box-shadow: 2px 4px 12px rgb(50, 51, 58, 0.4);
+    max-width: 90%;
+    background-color: var(--white-smoke);
+    padding: 1rem 1.5rem;
+    flex: 1;
+    min-height: 50dvh;
+}
+
+.card__head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.card__date {
+    font-size: clamp(20px, calc(1.25rem + ((1vw - 2.5px) * 0.2395)), 24px);
+    font-weight: 600;
+}
+
+button {
+    padding: 0.5em 1em;
+    font-size: clamp(18px, calc(1.125rem + ((1vw - 2px) * 0.5357)), 24px);
+    border: none;
+    border-radius: 50%;
+    background-color: var(--royal-blue-web-color);
+    color: var(--white-smoke);
+    outline: none;
+}
+
+.cardlist {
+    font-size: clamp(16px, calc(1rem + ((1vw - 2px) * 0.7143)), 24px);
+}
+
+.card__task {
+    border-bottom: 1px solid var(--light-gray);
+    margin-block: 0.5em;
+}
+
+.card__task__count {
+    font-size: clamp(16px, calc(1rem + ((1vw - 2px) * 0.1786)), 18px);
+}
+
+#insert__task {
+    outline: none;
+    border: none;
+    font-size: clamp(16px, calc(1rem + ((1vw - 2px) * 0.7143)), 24px);
+    background-color: var(--white-smoke);
+    max-width: 100%;
+    min-width: 0;
+}
+
+label {
+    margin-left: 0.5rem;
+}
+
+
+input[type="radio"]:checked+label {
+    text-decoration: line-through;
+}
+
+@media only screen and (max-width:368px) {
+    button {
+        padding: 0.1em 0.6em;
+    }
+
+    .card {
+        min-height: 95%;
+    }
+}
